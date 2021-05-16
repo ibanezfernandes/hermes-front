@@ -24,7 +24,7 @@
                     <div class="field">
                         <label class="label">Pesquisa</label>
                         <div class="control">
-                            <input class="input is-medium is-rounded" type="text" name="pesquisa" onchange="ler(this.value)">
+                            <input class="input is-medium is-rounded" type="text" name="pesquisa" onkeydown="ler(this.value)">
                         </div>
                     </div>
                     <div id="tabela">
@@ -75,7 +75,9 @@
     </section>
     <script>
         function ler(dados) {
-            
+            if (dados.length > 3) {
+                console.log(dados)
+            }
         }
     </script>
 </body>
